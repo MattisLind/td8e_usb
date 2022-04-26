@@ -8,3 +8,50 @@ A CPLD is taking care of the generation of clocksignals and capturing the data a
 The CPLD is a Xilinx XC2C64 in a 44 pin package. 
 
 The interface towards the drive will be TD8E compatible. 
+
+## TD8E interface
+
+### M868 board connector layout
+
+|   Pin   |   Function |
+|---------|------------|
+|    A    |   GND      |
+|    B    |   GND      |
+|    C    |   GND      |
+|    D    |   RD00     |
+|    E    |   GND      |
+|    F    |   RMT      |
+|    H    |   GND      |
+|    J    |   /RTT     |
+|    K    |   GND      |
+|    L    |   RD01     |
+|    M    |   GND      |
+|    N    | SEL_ECHO   |
+|    P    |   GND      |
+|    R    |    NC      |
+|    S    |   GND      |
+|    T    | WRT_ECHO   |
+|    U    |   GND      |
+|    V    |  RD02      |
+|    W    |   GND      |
+|    X    |   ND2      |
+|    Y    |   GND      |
+|    Z    |  WD_ENAB   |
+|    AA   |   GND      |
+|    BB   |   WPT      |
+|    CC   |   GND      |
+|    DD   |   ND1      |
+|    EE   |   GND      |
+|    FF   |   ND0      |
+|    HH   |   GND      |
+|    JJ   |   S/G\     |
+|    KK   |   GND      |
+|    LL   | UNITH      |
+|    MM   |   GND      |
+|    NN   | T/M ENABLE |
+|    PP   |   GND      |
+|    RR   | CON_ALL_HALT|
+|    SS   |   GND      |
+|    TT   |   F/R\     |
+|    UU   |   GND      |
+|    VV   |   GND      |
