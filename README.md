@@ -11,47 +11,49 @@ The interface towards the drive will be TD8E compatible.
 
 ## TD8E interface
 
-### M868 board connector layout
 
-|   Pin   |   Function |
-|---------|------------|
-|    A    |   GND      |
-|    B    |   GND      |
-|    C    |   GND      |
-|    D    |   RD00     |
-|    E    |   GND      |
-|    F    |   RMT      |
-|    H    |   GND      |
-|    J    |   /RTT     |
-|    K    |   GND      |
-|    L    |   RD01     |
-|    M    |   GND      |
-|    N    | SEL_ECHO   |
-|    P    |   GND      |
-|    R    |    NC      |
-|    S    |   GND      |
-|    T    | WRT_ECHO   |
-|    U    |   GND      |
-|    V    |  RD02      |
-|    W    |   GND      |
-|    X    |   ND2      |
-|    Y    |   GND      |
-|    Z    |  WD_ENAB   |
-|    AA   |   GND      |
-|    BB   |   WPT      |
-|    CC   |   GND      |
-|    DD   |   ND1      |
-|    EE   |   GND      |
-|    FF   |   ND0      |
-|    HH   |   GND      |
-|    JJ   |   S/G\     |
-|    KK   |   GND      |
-|    LL   | UNITH      |
-|    MM   |   GND      |
-|    NN   | T/M ENABLE |
-|    PP   |   GND      |
-|    RR   | CON_ALL_HALT|
-|    SS   |   GND      |
-|    TT   |   F/R\     |
-|    UU   |   GND      |
-|    VV   |   GND      |
+| Pin |   DEC Pin   |   Function M868 |  TD8E databoard |
+|-----|---------|------------|----------------------|
+|  1  |    A    |   GND      |    GND               |
+|  2  |    B    |   GND      |    GND               |           
+|  3  |    C    |   GND      |    GND               |
+|  4  |    D    |   RD00     |    RD0            |
+|  5  |    E    |   GND      |    GND            |
+|  6  |    F    |   RMT      |    RMT             |
+|  7  |    H    |   GND      |    GND             |
+|  8  |    J    |   RTT\     |    RTT            |
+|  9  |    K    |   GND      |    GND              |
+|  10  |    L    |   RD01     |    RD1            |
+|  11  |    M    |   GND      |    GND            |
+|  12  |    N    | SEL_ECHO   |  SEL_ECHO            |
+|  13  |    P    |   GND      |    GND            |
+|  14  |    R    |    NC      |    NC            |
+|  15  |    S    |   GND      |    GND            |
+|  16  |    T    | WRT_ECHO   | WRT_ECHO            |
+|  17  |    U    |   GND      |    GND            |
+|  18  |    V    |  RD02      |  RD2            |
+|  19  |    W    |   GND      |   GND            |
+|  20  |    X    |   ND2      | WD2(1)            |
+|  21  |    Y    |   GND      |  GND            |
+|  22  |    Z    |  WD_ENAB   | WD_ENAB_TD8E            |
+|  23  |    AA   |   GND      |   GND            |
+|  24  |    BB   |   WPT      |   WTT(1)            |
+|  25  |    CC   |   GND      |   GND            |
+|  26  |    DD   |   ND1      |   WD1(1)            |
+|  27  |    EE   |   GND      |   GND            |
+|  28  |    FF   |   ND0      |   WD2(1)            |
+|  29  |    HH   |   GND      |   GND            |
+|  30  |    JJ   |   S/G\     |  S/G(0)\_H            |
+|  31  |    KK   |   GND      |   GND            |
+|  32  |    LL   | UNITH      |UNIT(1)H            |
+|  33  |    MM   |   GND      |  GND             |
+|  34  |    NN   | T/M ENABLE | T/M_ENAB_L            |
+|  35  |    PP   |   GND      |   GND            |
+|  36  |    RR   | CON_ALL_HALT| CON_ALL_HALT_L            |
+|  37  |    SS   |   GND      |   GND             |
+|  38  |    TT   |   F/R\     |  F/R(0)\_H            |
+|  39  |    UU   |   GND      |   GND            |
+|  40  |    VV   |   GND      |   WMT(1) *              |
+
+
+(\*) This signal us not TD8E but used when interfacing with TC11 or TC08.
