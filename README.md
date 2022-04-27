@@ -69,3 +69,5 @@ SEL_ECHO is driven by a PNP open collector via a 100 ohm resistrior in the TU55/
 The TD8E inteface only has a the ability to select among two drives by setting the UNIT signal either 0 or 1. This means that the voltage developed will be either -15 indicating no selected drive, One drive selected should give about -2.5 volt. Two simultaneously selected drives give voltage arroun -1.36V. In practical terms it is not really necessary to have this kind of detection logic.
 
 Originally the circuitry to detect this was two long tailed pairs acting as comparators and then som wire-logic to create the logic function. In moderna day it is perhaps better to use an inverting amplifier and push the signal into the A/D of the microcontroller. Nevertheless there is still a need for a -15 V supply able to supply 50 mA.
+
+By dropping the voltage down to -5V or even -3.3V only around 20 mA is required. Then a MAX868 could solve the problem. Then a dual opamp could be used in inverting configuration to condition the signal for the A/D converter in the microcontroller.
