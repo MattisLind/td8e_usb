@@ -57,3 +57,15 @@ The interface towards the drive will be TD8E compatible.
 
 
 (\*) This signal us not TD8E but used when interfacing with TC11 or TC08.
+
+## WRT_ECHO
+
+WRT_ECHO is driven by a PNP open collctor cricuit in the TU55/TU56 drive. It is supposed to be connected to a negative pull down. The logic levels are then either 0V or the negative supply voltage. This then give a need for a negative supply to detect this logic level.
+
+## SEL_ECHO
+
+SEL_ECHO is driven by a PNP open collector via a 100 ohm resistrior in the TU55/TU56 drive. All the SEL_ECHO is wired together and in the TD8E control there is a 500 ohm resistor connected to -15 V potential. A analogue voltage will develop that corresponds to the number of drives selected. Thereby indicating a selection fault if certain analogue voltage are detected.
+
+The TD8E inteface only has a the ability to select among two drives by setting the UNIT signal either 0 or 1. This means that the voltage developed will be either -15 indicating no selected drive, One drive selected should give about -2.5 volt. Two simultaneously selected drives give voltage arroun -1.36V. In practical terms it is not really necessary to have this kind of detection logic.
+
+Originally the circuitry to detect this was two long tailed pairs acting as comparators and then som wire-logic to create the logic function. In moderna day it is perhaps better to use an inverting amplifier and push the signal into the A/D of the microcontroller. Nevertheless there is still a need for a -15 V supply able to supply 50 mA.
