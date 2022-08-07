@@ -60,7 +60,7 @@ The interface towards the drive will be TD8E compatible.
 
 ## WRT_ECHO
 
-WRT_ECHO is driven by a PNP open collctor cricuit in the TU55/TU56 drive. It is supposed to be connected to a negative pull down. The logic levels are then either 0V or the negative supply voltage. This then give a need for a negative supply to detect this logic level.
+WRT_ECHO is driven by a PNP open collctor cricuit in the TU55/TU56 drive. It is supposed to be connected to a negative pull down. The logic levels are then either 0V or the negative supply voltage. This then give a need for a negative supply to detect this logic level. An opto-coupler is an easy method of doing the level translation. 
 
 ## SEL_ECHO
 
